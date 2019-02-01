@@ -1,0 +1,22 @@
+server:
+  port: 7003
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://gaochao:8810/eureka
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: qbgc-test-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: F:/IDEAWorkspace/config
